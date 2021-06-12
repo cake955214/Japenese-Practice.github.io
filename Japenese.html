@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.css" rel='stylesheet'>
+    <script src="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script>
+        var x =["あ","い","う","え","お",
+                "か","き","く","け","こ",
+                "さ","し","す","せ","そ",
+                "た","ち","つ","て","と",
+                "な","に","ぬ","ね","の",
+                "は","ひ","ふ","へ","ほ",
+                "ま","み","む","め","も",
+                "や",     "ゆ",     "よ",
+                "ら","り","る","れ","ろ",
+                "わ",     "ん",     "を"
+        ];
+        var y =["a" ,"i" ,"u" ,"e" ,"o" ,
+                "ka","ki","ku","ke","ko",
+                "sa","shi","su","se","so",
+                "ta","chi","tsu","te","to",
+                "na","ni","nu","ne","no",
+                "ha","hi","fu","he","ho",
+                "ma","mi","mu","me","mo",
+                "ya",     "yu",     "yo",
+                "ra","ri","ru","re","ro",
+                "wa",     "n",       "o"
+        ];
+        var z;
+        $(document).ready(function() {
+            $("#change").click(function () {
+                z = Math.floor(Math.random()*46);
+                $("#num").text(x[z]);
+                $("#answer2").text("");
+                console.log(z);
+            });
+            $("#answer").click(function () {
+                $("#answer2").text(y[z]);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="ts slate">
+    <button class="ts primary button" style="font-size: 40px" id="change"> 隨機產生 </button>
+    <h2 style="font-size: 80px" id="num" type="text"></h2>
+    <br><br><br>
+    <button class="ts negative button" style="font-size: 40px" id="answer"> 答案 </button>
+    <h2 style="font-size: 80px" id="answer2"></h2>
+</div>
+
+</body>
+</html>
