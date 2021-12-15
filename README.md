@@ -1,2 +1,2 @@
-# Japenese-Practice.github.io
+# JapenesePractice
 Japenese memory exercise
